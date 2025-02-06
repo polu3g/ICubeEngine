@@ -1,0 +1,73 @@
+{
+	"info": {
+		"_postman_id": "6adb8e16-23ad-47bb-ae3f-006a8d1f335d",
+		"name": "AI Tensorflow",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "697427",
+		"_collection_link": "https://interstellar-crater-311408.postman.co/workspace/ii~fa61da79-8652-4c82-b799-f7db79fd1d0a/collection/697427-6adb8e16-23ad-47bb-ae3f-006a8d1f335d?action=share&source=collection_link&creator=697427"
+	},
+	"item": [
+		{
+			"name": "Predict set 1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"City\": \"Nairobi, Kenya\",\r\n  \"Season\": \"Early Winter\",\r\n  \"Month\": \"October\",\r\n  \"Promotions\": \"Refer a Friend Discounts\",\r\n  \"Offers\": \"Percentage Discount\",\r\n  \"ShippingOptions\": \"In-Store Pickup\",\r\n  \"LocalFestivals\": \"New Year's Day (Global)\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/predict",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"predict"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Predict set 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"City\": \"New York City, USA\",\r\n  \"Season\": \"Dry Season\",\r\n  \"Month\": \"January\",\r\n  \"Promotions\": \"Percentage Off (e.g., 20% off)\",\r\n  \"Offers\": \"Percentage Discount\",\r\n  \"ShippingOptions\": \"Standard Shipping\",\r\n  \"LocalFestivals\": \"New Year's Day (Global)\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/predict",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"predict"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

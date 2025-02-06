@@ -1,0 +1,73 @@
+{
+	"info": {
+		"_postman_id": "30a088e4-8e8f-437e-9597-6ba46b774639",
+		"name": "Innovations",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "697427",
+		"_collection_link": "https://interstellar-crater-311408.postman.co/workspace/ii~fa61da79-8652-4c82-b799-f7db79fd1d0a/collection/697427-30a088e4-8e8f-437e-9597-6ba46b774639?action=share&source=collection_link&creator=697427"
+	},
+	"item": [
+		{
+			"name": "get Seasons",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// const cheerio = require('cheerio');\r",
+							"\r",
+							"// Make sure the response status code is 200 (OK)\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// Load the HTML content into cheerio\r",
+							"const $ = cheerio.load(pm.response.text());\r",
+							"\r",
+							"// Extract the text from the first <li> element within <ul class=\"seasons\">\r",
+							"const firstSeasonItem = $('ul.seasons li').first().text().trim();\r",
+							"\r",
+							"// Log the extracted text\r",
+							"console.log(firstSeasonItem.split('Current Season'));\r",
+							"\r",
+							"// Set an environment variable with the extracted text (optional)\r",
+							"pm.environment.set(\"firstSeasonItem\", firstSeasonItem);\r",
+							"\r",
+							"// Test to ensure the text extraction is working correctly\r",
+							"pm.test(\"Extracted first season item text\", function () {\r",
+							"    pm.expect(firstSeasonItem).to.be.a('string').that.is.not.empty;\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.timeanddate.com/calendar/seasons.html?n=111",
+					"protocol": "https",
+					"host": [
+						"www",
+						"timeanddate",
+						"com"
+					],
+					"path": [
+						"calendar",
+						"seasons.html"
+					],
+					"query": [
+						{
+							"key": "n",
+							"value": "111"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
