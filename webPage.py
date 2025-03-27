@@ -1,8 +1,7 @@
 import pandas as pd
 import json
 
-OPEN_API_KEy = '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'
-OPEN_AI_ORG = 'org-GvW8dAzIVEESivRdu6XMG77C'
+
 # Sample fleet log data
 data = [
     {"printer_id": "HP123", "status": "Low Ink", "location": "Office A", "last_service": "2025-01-15"},
