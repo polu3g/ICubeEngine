@@ -15,6 +15,7 @@ class AgentState(TypedDict):
     response: str
 
 # Initialize local LLM
+# 'C:/Users/<username>/.cache/gpt4all/mistral-7b1-instruct-v0.1.Q4_K_S.gguf'
 llm = GPT4All(model="mistral-7b-instruct-v0.1.Q4_K_S.gguf")
 
 # Load vector database (FAISS example)
